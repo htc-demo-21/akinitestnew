@@ -13,12 +13,12 @@ containers:
   frontend:
     image: # Set by pipeline
     variables:
-      Hello: World
+      Hello: Millenium IT
 
 resources:
   dns: # We need a DNS record to point to the service 
     type: dns
-  bucket: 
+  bucket:
     type: azure-blob
   route:
     type: route
@@ -26,4 +26,3 @@ resources:
       host: ${resources.dns.host}
       path: /
       port: 80
-
